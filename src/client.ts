@@ -1570,6 +1570,10 @@ export class Client extends EventSpewer {
       });
     }
     if (options.messageReference && typeof(options.messageReference) === 'object') {
+      if (!options.messageReference.channelId) {
+        throw new Error('messageReference.channelId is null!');
+      }
+      
       body.message_reference = {
         channel_id: options.messageReference.channelId,
         fail_if_not_exists: options.messageReference.failIfNotExists,
@@ -3696,7 +3700,7 @@ export class Client extends EventSpewer {
     }
     const route = {
       method: HTTPMethods.POST,
-      path: Api.WEBHOOK_TOKEN,
+      path: Api.WEBHOOK_TOKEN as string,
       params,
     };
 
