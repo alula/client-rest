@@ -702,11 +702,16 @@ export class Client extends EventSpewer {
       }
       return {
         default_permission: options.defaultPermission,
+        dm_permission: options.dmPermission,
+        default_member_permissions: options.defaultMemberPermissions,
         description: options.description,
+        description_localizations: options.descriptionLocalizations,
         id: options.id,
         name: options.name,
+        name_localizations: options.nameLocalizations,
         options: options.options,
         type: options.type,
+        nsfw: options.nsfw,
       };
     });
     if (this.clientsideChecks) {
@@ -734,11 +739,16 @@ export class Client extends EventSpewer {
       }
       return {
         default_permission: options.defaultPermission,
+        dm_permission: options.dmPermission,
+        default_member_permissions: options.defaultMemberPermissions,
         description: options.description,
+        description_localizations: options.descriptionLocalizations,
         id: options.id,
         name: options.name,
+        name_localizations: options.nameLocalizations,
         options: options.options,
         type: options.type,
+        nsfw: options.nsfw,
       };
     });
     if (this.clientsideChecks) {
@@ -820,10 +830,16 @@ export class Client extends EventSpewer {
     } else {
       body = {
         default_permission: options.defaultPermission,
+        dm_permission: options.dmPermission,
+        default_member_permissions: options.defaultMemberPermissions,
         description: options.description,
+        description_localizations: options.descriptionLocalizations,
+        id: options.id,
         name: options.name,
+        name_localizations: options.nameLocalizations,
         options: options.options,
         type: options.type,
+        nsfw: options.nsfw,
       };
     }
     if (this.clientsideChecks) {
@@ -851,10 +867,16 @@ export class Client extends EventSpewer {
     } else {
       body = {
         default_permission: options.defaultPermission,
+        dm_permission: options.dmPermission,
+        default_member_permissions: options.defaultMemberPermissions,
         description: options.description,
+        description_localizations: options.descriptionLocalizations,
+        id: options.id,
         name: options.name,
+        name_localizations: options.nameLocalizations,
         options: options.options,
         type: options.type,
+        nsfw: options.nsfw,
       };
     }
     if (this.clientsideChecks) {
@@ -2435,9 +2457,16 @@ export class Client extends EventSpewer {
     } else {
       body = {
         default_permission: options.defaultPermission,
+        dm_permission: options.dmPermission,
+        default_member_permissions: options.defaultMemberPermissions,
         description: options.description,
+        description_localizations: options.descriptionLocalizations,
+        id: options.id,
         name: options.name,
+        name_localizations: options.nameLocalizations,
         options: options.options,
+        type: options.type,
+        nsfw: options.nsfw,
       };
     }
     const params = {applicationId, commandId};
@@ -2466,9 +2495,16 @@ export class Client extends EventSpewer {
     } else {
       body = {
         default_permission: options.defaultPermission,
+        dm_permission: options.dmPermission,
+        default_member_permissions: options.defaultMemberPermissions,
         description: options.description,
+        description_localizations: options.descriptionLocalizations,
+        id: options.id,
         name: options.name,
+        name_localizations: options.nameLocalizations,
         options: options.options,
+        type: options.type,
+        nsfw: options.nsfw,
       };
     }
     const params = {applicationId, guildId, commandId};

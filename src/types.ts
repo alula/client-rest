@@ -103,20 +103,30 @@ export namespace RequestTypes {
 
   export interface CreateApplicationCommand {
     defaultPermission?: boolean,
+    dmPermission?: boolean,
+    defaultMemberPermissions?: string | null,
     description: string,
+    descriptionLocalizations: {[locale: string]: string},
     id?: string,
     name: string,
+    nameLocalizations: {[locale: string]: string},
     options?: Array<CreateApplicationCommandOption | toJSON<CreateApplicationCommandData>>,
     type?: number,
+    nsfw?: boolean,
   }
 
   export interface CreateApplicationCommandData {
     default_permission?: boolean,
+    dm_permission?: boolean,
+    default_member_permissions?: string | null,
     description?: string,
+    description_localizations: {[locale: string]: string},
     id?: string,
     name: string,
+    name_localizations: {[locale: string]: string},
     options?: Array<CreateApplicationCommandOption | toJSON<CreateApplicationCommandData>>
     type?: number,
+    nsfw?: boolean,
   }
 
   export interface CreateApplicationCommandOption {
